@@ -30,9 +30,18 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 ---
 
+<a id="updates"></a>
+
+## ⭐ Updates
+
+- **[April 10, 2026]**: Code, model and dataset are released.
+
+<a id="model-and-datasets"></a>
+
+---
+
 ## 📚 Table of Contents
 
-- [⭐ Updates](#updates)
 - [💡 Introduction](#introduction)
 - [💻 Model and Datasets](#model-and-datasets)
 - [🚀 Quick Start](#quick-start)
@@ -43,16 +52,6 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 - [📖 Experimental Results](#experimental-results)
 - [☀️ Acknowledgement](#acknowledgement)
 - [📚 Citation](#citations)
-
----
-
-<a id="updates"></a>
-
-## ⭐ Updates
-
-- **[April 10, 2026]**: Code, model and dataset are released.
-
-<a id="model-and-datasets"></a>
 
 ---
 
