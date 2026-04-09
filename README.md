@@ -47,7 +47,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 - **Soft Parallel Decoding**: Uses interpolation between mask and token embeddings to propagate confidence priors from previous steps.
 
 <div align="center">
-  <img src="assets/tradeoff.png" width="90%" />
+  <img src="assets/tradeoff.png" width="93%" />
   <br>
   <em>Superior Parallelism-Accuracy Trade-off, Increased TPF with Maintained Accuracy.</em>
 </div>
