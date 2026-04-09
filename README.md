@@ -296,8 +296,7 @@ bash eval_llada_dmax_code.sh
 
 ## 🔍 Decoding Process Visualization
 
-We provide a script for visualizing the full decoding process. Run `demo.py` to generate an HTML file named `dllm_demo.html`.  
-Then open this file in Chrome to view the decoding visualization.
+We provide a script for visualizing the full decoding process. Run `demo.py` to generate an HTML file named `dllm_demo.html`.Then open this file in Chrome to view the decoding visualization.
 
 ```bash
 python demo.py
