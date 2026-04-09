@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 <a id="updates"></a>
 
-## ⭐ Updates
+##  Updates
 
 - **[April 10, 2026]**: Code, model and dataset are released.
 
@@ -40,7 +40,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 <a id="highliths"></a>
 
-## 💪 Highlights
+## Highlights
 
 - **Aggressive Decoding Parallelism**: Achieves 6.0 TPF on math and reasoning tasks and 6.6 TPF on code tasks while preserving accuracy.
 - **Self-Revising dLLM**: Extends a pretrained MDLM into a UDLM with an intrinsic ability to revise its own erroneous predictions during decoding.
