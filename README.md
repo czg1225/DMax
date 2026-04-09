@@ -254,10 +254,6 @@ python demo.py
 ![demo](assets/demo.png)
 
 ## 📖 Experimental Results
-### Main Results:
-![llada-exp](assets/exp.png)
-
-### Superior Speed-Accuracy Trade-off:
 ![trade-off](assets/tradeoff.png)
 
 ## ☀️ Acknowledgement
