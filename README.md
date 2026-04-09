@@ -212,7 +212,7 @@ Edit `configs/sft/llada2_mini_bd_oput.yaml`:
 
 ```yaml
 model:
-  model_path: "/your/model/path"
+  model_path: "/path/to/save/merged_model"
 data:
   train_path: "/your/data/path"
 train:
