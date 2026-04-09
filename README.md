@@ -250,11 +250,11 @@ python scripts/moe_convertor.py \
 
 **Step 2: Copy the Modeling File**
 
-After the conversion, a final manual step is required. You must copy the model's architecture file (`modeling_llada2_moe.py` and `configuration_llada2_moe`) into the newly created separate_expert_model directory. This file must come from the directory of your original base model — the one you started with before any merge or training operations. The training and conversion processes only update the model weights, not the architecture file, which is why the original version is needed.
+After the conversion, a final manual step is required. You must copy the DMax model's architecture file (`modeling_llada2_moe.py` and `configuration_llada2_moe`) into the newly created separate_expert_model directory. This file must come from the directory of your local saved DMax model. The training and conversion processes only update the model weights, not the architecture file, which is why the DMax version is needed.
 
 ```bash
-cp /path/to/original_base_model/modeling_llada2_moe.py /path/to/save/separate_expert_model/
-cp /path/to/original_base_model/configuration_llada2_moe.py /path/to/save/separate_expert_model/
+cp /path/to/local_saved_DMax_model/modeling_llada2_moe.py /path/to/save/separate_expert_model/
+cp /path/to/local_saved_DMax_model/configuration_llada2_moe.py /path/to/save/separate_expert_model/
 ```
 
 With the model converted and the modeling file in place, you are now ready to chat!
@@ -266,9 +266,16 @@ With the model converted and the modeling file in place, you are now ready to ch
 ## ⚡ Evaluation
 
 Our training scripts is based on the dInfer reposity.
-
 ```bash
 cd dInfer/evaluations
+```
+
+Download the DMax model: Follow the helper script to download the weights from the Hugging Face Hub.
+```bash
+# Choose a destination for the original model files
+python download_hf_model.py \
+  --repo_id Zigeng/DMax-Math-16B \
+  --local_dir /path/to/local_saved_model
 ```
 
 ### 1. Evaluation on Math & Reasoning Benchmarks
@@ -303,6 +310,8 @@ The current evaluation suite supports the following two benchmarks:
 
 - ✅ `HumanEval_Instruct`
 - ✅ `MBPP_Instruct`
+- ✅ `HumanEval_Instruct_Plus`
+- ✅ `MBPP_Instruct_Plus`
 
 ```bash
 bash eval_llada_dmax_code.sh

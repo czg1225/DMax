@@ -3,7 +3,8 @@ export HF_ALLOW_CODE_EVAL=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 export TRANSFORMERS_TRUST_REMOTE_CODE=1
 export CUDA_VISIBLE_DEVICES=0,1
-export PYTHONPATH="/scratch/e0973935/dInfer/python:${PYTHONPATH}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="${SCRIPT_DIR}/../python:${PYTHONPATH}"
 # export HF_DATASETS_OFFLINE=1
 
 parallel_decoding='threshold' # 
@@ -27,7 +28,7 @@ master_port="23456"
 save_samples=True # save samples
 batch_size=1
 
-# use tasks mbpp_sanitized_llada_mini  humaneval_instruct  
+# use tasks    mbpp_sanitized_llada_mini   humaneval_instruct   mbpp_plus   humaneval_plus
 if [ "$parallel" = "tp" ]; then
   for task in mbpp_sanitized_llada_mini; do
     output_path="${output_dir}/${task}"
