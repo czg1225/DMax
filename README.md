@@ -32,8 +32,8 @@ https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 ## 📚 Table of Contents
 
 - [💡 Introduction](#introduction)
-- [💻 Model and Datasets](#model-and-datasets)
 - [⭐ Updates](#updates)
+- [💻 Model and Datasets](#model-and-datasets)
 - [🚀 Quick Start](#quick-start)
 - [🔧 Installation](#installation)
 - [🔥 Training](#training)
@@ -59,7 +59,15 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 ---
 
+<a id="updates"></a>
+
+## ⭐ Updates
+
+- **[Aprial 10, 2026]**: Code, model and dataset are released.
+
 <a id="model-and-datasets"></a>
+
+---
 
 ## 💻 Model and Datasets
 
@@ -76,13 +84,6 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 ---
 
-<a id="updates"></a>
-
-## ⭐ Updates
-
-- **[Aprial 10, 2026]**: Code, model and dataset are released.
-
----
 
 <a id="quick-start"></a>
 
