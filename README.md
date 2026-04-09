@@ -261,10 +261,10 @@ We provide evaluation scripts for several math and reasoning benchmarks. Run the
 
 The current evaluation suite supports four benchmarks:
 
-- `GSM8K`
-- `MATH500`
-- `Minerva_Algebra`
-- `ASDIV`
+- ✅ `GSM8K`
+- ✅ `MATH500`
+- ✅ `Minerva_Algebra`
+- ✅ `ASDIV`
 
 ```bash
 bash eval_llada_dmax_math.sh
@@ -285,8 +285,8 @@ We also provide evaluation scripts for code generation benchmarks. Run the follo
 
 The current evaluation suite supports the following two benchmarks:
 
-- `HumanEval_Instruct`
-- `MBPP_Instruct`
+- ✅ `HumanEval_Instruct`
+- ✅ `MBPP_Instruct`
 
 ```bash
 bash eval_llada_dmax_code.sh
