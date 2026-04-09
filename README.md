@@ -350,9 +350,11 @@ python demo.py
 
 Our code builds on [dFactory](https://github.com/inclusionAI/dFactory), [dInfer](https://github.com/inclusionAI/dInfer), and we acknowledge these great works for laying the groundwork that made our approach possible.
 
+---
+
 <a id="citations"></a>
 
-## Citation
+## 📚 Citation
 If our research assists your work, please give us a star ⭐ or cite us using:
 ```
 
