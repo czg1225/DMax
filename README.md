@@ -44,6 +44,8 @@ https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 
 ---
 
+<a id="introduction"></a>
+
 ## 💡 Introduction
 
 We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumulation in parallel decoding, enabling aggressive decoding parallelism while preserving generation quality. Unlike conventional masked dLLMs that decode through a binary mask-to-token transition, DMax reformulates decoding as a progressive self-refinement from mask embeddings to token embeddings. At the core of our approach is On-Policy Uniform Training, a novel training strategy that efficiently unifies masked and uniform dLLMs, equipping the model to recover clean tokens from both masked inputs and its own erroneous predictions. Building on this foundation, we further intoduce Soft Parallel Decoding. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of DMax.
@@ -56,6 +58,8 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 </div>
 
 ---
+
+<a id="model-and-datasets"></a>
 
 ## 💻 Model and Datasets
 
@@ -72,11 +76,15 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 ---
 
+<a id="updates"></a>
+
 ## ⭐ Updates
 
 - **[Aprial 10, 2026]**: Code, model and dataset are released.
 
 ---
+
+<a id="quick-start"></a>
 
 ## 🚀 Quick Start
 
@@ -119,6 +127,8 @@ print("nfe:",nfe,"token length",len(generated_tokens[0]))
 
 ---
 
+<a id="installation"></a>
+
 ## 🔧 Installation
 
 1. Clone the **DMax** reposity
@@ -149,6 +159,8 @@ pip install vllm==0.10.2
 ```
 
 ---
+
+<a id="training"></a>
 
 ## 🔥 Training
 
@@ -247,6 +259,8 @@ With the model converted and the modeling file in place, you are now ready to ch
 
 ---
 
+<a id="evaluation"></a>
+
 ## ⚡ Evaluation
 
 Our training scripts is based on the dInfer reposity.
@@ -294,6 +308,8 @@ bash eval_llada_dmax_code.sh
 
 ---
 
+<a id="decoding-process-visualization"></a>
+
 ## 🔍 Decoding Process Visualization
 
 We provide a script for visualizing the full decoding process. Run `demo.py` to generate an HTML file named `dllm_demo.html`.Then open this file in Chrome to view the decoding visualization.
@@ -306,6 +322,8 @@ python demo.py
 
 ---
 
+<a id="experimental-results"></a>
+
 ## 📖 Experimental Results
 
 ### Superior Parallelism-Accuracy Trade-off, Improved TPF with Maintained Accuracy:
@@ -313,6 +331,8 @@ python demo.py
 ![trade-off](assets/tradeoff.png)
 
 ---
+
+<a id="acknowledgement"></a>
 
 ## ☀️ Acknowledgement
 
