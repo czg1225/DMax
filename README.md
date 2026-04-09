@@ -36,7 +36,21 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 - **[April 10, 2026]**: Code, model and dataset are released.
 
-<a id="model-and-datasets"></a>
+---
+
+<a id="highliths"></a>
+
+## 💪 Highlights
+
+- **Aggressive Decoding Parallelism**: Achieves 6.0 TPF on math and reasoning tasks and 6.6 TPF on code tasks while preserving accuracy.
+- **Self-Revising dLLM**: Extends a pretrained MDLM into a UDLM with an intrinsic ability to revise its own erroneous predictions during decoding.
+- **Soft Parallel Decoding**: Uses interpolation between mask and token embeddings to propagate confidence priors from previous steps.
+
+<div align="center">
+  <img src="assets/tradeoff.png" width="100%" />
+  <br>
+  <em>Superior Parallelism-Accuracy Trade-off, Increased TPF with Maintained Accuracy.</em>
+</div>
 
 ---
 
@@ -69,6 +83,8 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 </div>
 
 ---
+
+<a id="model-and-datasets"></a>
 
 ## 💻 Model and Datasets
 
