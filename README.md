@@ -21,7 +21,7 @@
 
 </div>
 
-https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
+https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 > **DMax: Aggressive Parallel Decoding for dLLMs**  
 > [Zigeng Chen](https://czg1225.github.io/chenzigeng99/), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
@@ -307,7 +307,7 @@ python val_asdiv.py       # postprocess and calculate accuracy on ASDIV
 
 We also provide evaluation scripts for code generation benchmarks. Run the following command to start the evaluation. You may modify the inference settings in `eval_llada_dmax_code.sh` as needed. Before running the script, please set `model_path` to the path of your locally saved model.
 
-The current evaluation suite supports the following two benchmarks:
+The current evaluation suite supports the following four benchmarks:
 
 - ✅ `HumanEval_Instruct`
 - ✅ `MBPP_Instruct`
