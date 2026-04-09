@@ -200,8 +200,7 @@ def enrich_demo_trace_for_render(demo_trace):
 
 
 def markdown_to_html(text):
-    text = re.sub(r"\n{2,}", "\n", text)
-    escaped = html.escape(text.replace("\r\n", "\n"))
+    escaped = html.escape(text.replace("\r\n", "\n").replace("\r", "\n"))
     code_blocks = []
 
     def stash_code(match):
@@ -235,13 +234,21 @@ def markdown_to_html(text):
     def flush_paragraph():
         nonlocal paragraph_lines
         if paragraph_lines:
-            merged = " ".join(line.strip() for line in paragraph_lines if line.strip())
+            merged_parts = []
+            non_empty_lines = [line for line in paragraph_lines if line.strip()]
+            for idx, line in enumerate(non_empty_lines):
+                hard_break = line.endswith("  ") or line.endswith("\\")
+                content = line[:-1] if line.endswith("\\") else line
+                merged_parts.append(format_inline(content.strip()))
+                if idx < len(non_empty_lines) - 1:
+                    merged_parts.append("<br />" if hard_break else " ")
+            merged = "".join(merged_parts)
             if merged:
-                parts.append(f"<p>{format_inline(merged)}</p>")
+                parts.append(f"<p>{merged}</p>")
         paragraph_lines = []
 
     for raw_line in escaped.split("\n"):
-        line = raw_line.rstrip()
+        line = raw_line
         stripped = line.strip()
 
         if not stripped:
@@ -252,8 +259,13 @@ def markdown_to_html(text):
         heading = re.match(r"^(#{1,6})\s+(.*)$", stripped)
         unordered = re.match(r"^[-*+]\s+(.*)$", stripped)
         ordered = re.match(r"^(\d+)\.\s+(.*)$", stripped)
+        code_block = re.fullmatch(r"@@CODEBLOCK(\d+)@@", stripped)
 
-        if heading:
+        if code_block:
+            flush_paragraph()
+            close_lists()
+            parts.append(stripped)
+        elif heading:
             flush_paragraph()
             close_lists()
             level = len(heading.group(1))
@@ -278,7 +290,7 @@ def markdown_to_html(text):
             parts.append(f"<li>{format_inline(ordered.group(2))}</li>")
         else:
             close_lists()
-            paragraph_lines.append(stripped)
+            paragraph_lines.append(line)
 
     flush_paragraph()
     close_lists()
@@ -540,10 +552,6 @@ def render_html(payload):
       margin-top: 0 !important;
     }}
 
-    .answer-box br {{
-      display: none;
-    }}
-
     .controls {{
       display: flex;
       align-items: center;
@@ -739,10 +747,9 @@ def render_html(payload):
     <section class="hero">
       <div class="panel hero-main">
         <p class="eyebrow">Diffusion Language Model</p>
-        <h1>Step-by-step decoding,<br />made visible.</h1>
+        <h1>DMax Decoding Process,<br />made visible.</h1>
         <div class="hero-copy">
-          Inspect the full block-wise diffusion process frame by frame, including token refreshes,
-          left-to-right mask decoding, confidence evolution, and block convergence.
+          Inspect the full block-wise diffusion process frame by frame.
         </div>
       </div>
       <div class="panel summary-grid">
