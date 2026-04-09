@@ -19,6 +19,24 @@
 
 <p><strong>DMax is a new dLLM paradigm achieving aggressive parallel decoding while preserving generation quality.</strong></p>
 
+<p>
+  <a href="#quick-start">
+    <img alt="Quick Start" src="https://img.shields.io/badge/Quick%20Start-FF6B6B?style=for-the-badge">
+  </a>
+  <a href="#installation">
+    <img alt="Installation" src="https://img.shields.io/badge/Installation-4E94CE?style=for-the-badge">
+  </a>
+  <a href="#training">
+    <img alt="Training" src="https://img.shields.io/badge/Training-22C55E?style=for-the-badge">
+  </a>
+  <a href="#evaluation">
+    <img alt="Evaluation" src="https://img.shields.io/badge/Evaluation-F59E0B?style=for-the-badge">
+  </a>
+  <a href="#decoding-process-visualization">
+    <img alt="Visualization" src="https://img.shields.io/badge/Visualization-8B5CF6?style=for-the-badge">
+  </a>
+</p>
+
 </div>
 
 https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
@@ -59,6 +77,11 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 ## 💻 Model and Datasets
 
+<p>
+  <img alt="Models" src="https://img.shields.io/badge/Models-Available-4E94CE?style=flat-square">
+  <img alt="Datasets" src="https://img.shields.io/badge/Datasets-Available-22C55E?style=flat-square">
+</p>
+
 | Model | Description | Source Model | Link |
 | --- | --- | --- | --- |
 | 🤖 DMax-Math-16B | Highly parallel dLLM for math and reasoning. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-Math-16B) |
@@ -73,6 +96,10 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 ---
 
 ## ⭐ Updates
+
+<p>
+  <img alt="Latest Update" src="https://img.shields.io/badge/Latest%20Update-Aprial%2010%2C%202026-22C55E?style=flat-square">
+</p>
 
 - **[Aprial 10, 2026]**: Code, model and dataset are released.
 
