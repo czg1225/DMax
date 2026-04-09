@@ -181,15 +181,21 @@ PYTHONPATH=$(pwd)/VeOmni:$PYTHONPATH sh train.sh tasks/train_llada2_bd_oput.py c
 
 To interact with your Trained model, you must complete two main steps: converting the checkpoint and copying the modeling file.
 
-**Step 1: Convert the Checkpoint**
+### 5. Interact with the Trained Model
 
-First, you need to convert the checkpoint from the merged format used during training back to the standard Mixture-of-Experts (MoE) structure.
+To interact with a trained model, complete the following two steps:
 
-> **Important: Finding the Correct Input Path**
+#### Step 1: Convert the Checkpoint
+
+First, convert the checkpoint from the merged format used during training back to the standard Mixture-of-Experts (MoE) format.
+
+> **Important**
 >
-> The --input-path for the conversion script is the path to the saved Hugging Face checkpoint, not the root output directory you specified during training. The checkpoint is typically located in a subdirectory like:
+> The `--input-path` should point to the saved Hugging Face checkpoint, **not** the root output directory specified during training.
 >
-> TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/
+> The checkpoint is typically located in a subdirectory such as:
+>
+> `TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/`
 
 Run the following command to perform the conversion:
 
@@ -202,9 +208,10 @@ python scripts/moe_convertor.py \
 
 **Step 2: Copy the Modeling File**
 
-After the conversion, a final manual step is required. You must copy the model's architecture file (e.g., `modeling_llada2_moe.py`) into the newly created separate_expert_model directory. This file must come from the directory of your original base model — the one you started with before any merge or training operations. The training and conversion processes only update the model weights, not the architecture file, which is why the original version is needed.
+After the conversion, a final manual step is required. You must copy the model's architecture file (`modeling_llada2_moe.py` and `configuration_llada2_moe`) into the newly created separate_expert_model directory. This file must come from the directory of your original base model — the one you started with before any merge or training operations. The training and conversion processes only update the model weights, not the architecture file, which is why the original version is needed.
 ```bash
 cp /path/to/original_base_model/modeling_llada2_moe.py /path/to/save/separate_expert_model/
+cp /path/to/original_base_model/configuration_llada2_moe.py /path/to/save/separate_expert_model/
 ```
 With the model converted and the modeling file in place, you are now ready to chat!  
 
