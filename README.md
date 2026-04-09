@@ -2,18 +2,18 @@
 
 # 🚀 DMax: Aggressive Parallel Decoding for dLLMs
 
-<p>
+<p align="center">
   <a href="https://github.com/czg1225/DMax/blob/main/LICENSE">
-    <img alt="Apache" src="https://img.shields.io/badge/License-Apache-4E94CE.svg">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-3B82F6?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/czg1225/DMax">
-    <img src="https://img.shields.io/badge/Paper-Arxiv-darkred.svg" alt="Paper">
+    <img src="https://img.shields.io/badge/Paper-arXiv-B91C1C?style=flat-square&logo=arxiv&logoColor=white" alt="Paper">
   </a>
   <a href="https://huggingface.co/collections/Zigeng/dmax-models">
-    <img src="https://img.shields.io/badge/HuggingFace-Models-FFB000.svg" alt="Project">
+    <img src="https://img.shields.io/badge/Models-Hugging%20Face-FBBF24?style=flat-square&logo=huggingface&logoColor=black" alt="Models">
   </a>
   <a href="https://huggingface.co/collections/Zigeng/dmax-training-data">
-    <img src="https://img.shields.io/badge/HuggingFace-Dataset-FFB000.svg" alt="Project">
+    <img src="https://img.shields.io/badge/Datasets-Hugging%20Face-F59E0B?style=flat-square&logo=huggingface&logoColor=black" alt="Datasets">
   </a>
 </p>
 
