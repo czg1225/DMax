@@ -1,0 +1,3 @@
+[submodule "dFactory/VeOmni"]
+	path = dFactory/VeOmni
+	url = https://github.com/ByteDance-Seed/VeOmni.git
