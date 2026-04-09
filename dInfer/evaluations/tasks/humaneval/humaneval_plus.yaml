@@ -1,0 +1,4 @@
+include: humaneval.yaml
+task: humaneval_plus
+doc_to_text: "Write a solution to the following problem and make sure that it passes the tests:\n```python\n{{ prompt }}\n```\n\nPlease enclose your code within delimiters as follows:\n```python\n# YOUR CODE HERE\n```\n\n"
+dataset_path: evalplus/humanevalplus

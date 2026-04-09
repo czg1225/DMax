@@ -1,0 +1,12 @@
+[
+  {
+    "id": 0,
+    "question": "Complete the following python code:\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "answer": "```python\nfrom typing import List\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    # Sort the list of numbers\n    numbers.sort()\n    \n    # Iterate through the sorted list\n    for i in range(len(numbers) - 1):\n        # Check if the difference between consecutive numbers is less than the threshold\n        if numbers[i + 1] - numbers[i] < threshold:\n            return True\n    \n    # If no such pair is found, return False\n    return False\n```\n\n### Explanation:\n- **Sorting**: The list is sorted to make it easier to find close numbers.\n- **Iteration**: We iterate through the sorted list and check the difference between consecutive numbers.\n"
+  },
+  {
+    "id": 1,
+    "question": "Please solve the following math problem in English:\n Harry has 5 apples. How many apples will be remained, if he eat 2 apples.\n",
+    "answer": "Harry has 5 apples. If he eats 2 apples, the number of apples remaining is:\n\n5 - 2 = 3\n\nSo, **3 apples** will remain."
+  }
+]

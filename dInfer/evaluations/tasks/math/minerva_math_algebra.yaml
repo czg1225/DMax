@@ -1,0 +1,56 @@
+tag:
+  - math_word_problems
+task: minerva_math_algebra
+dataset_path: EleutherAI/hendrycks_math
+dataset_name: algebra
+output_type: generate_until
+process_docs: !function utils.process_docs
+process_results: !function utils.process_results
+training_split: train
+# fewshot_split: train
+test_split: test
+doc_to_text: "{{problem}}\nLet's think step by step, and put your final answer within \\boxed{}."
+doc_to_target: "{{answer if few_shot is undefined else solution}}"
+fewshot_config:
+  sampler: first_n
+  samples: !function utils.list_fewshot_samples
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: false
+    regexes_to_ignore:
+      - ","
+      - "\\$"
+      - "(?s).*#### "
+      - "\\.$"
+      - "(?<=\\d)\\.0+(?!\\d)"
+  - metric: math_verify
+    aggregation: mean
+    higher_is_better: true
+generation_kwargs:
+  until:
+    - "Question:"
+    - "</s>"
+    - "<|im_end|>"
+  do_sample: false
+  temperature: 0.0
+repeats: 1
+num_fewshot: 0
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: "#### (\\-?[0-9\\.\\,]+)"
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        group_select: -1
+        regex_pattern: "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+      - function: "take_first"
+
+
+metadata:
+  version: 3.0
