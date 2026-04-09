@@ -26,6 +26,7 @@ https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 > **DMax: Aggressive Parallel Decoding for dLLMs**  
 > [Zigeng Chen](https://czg1225.github.io/chenzigeng99/), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
 > [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore
+
 > Paper [Arxiv](https://github.com/czg1225/DMax)
 
 ---
