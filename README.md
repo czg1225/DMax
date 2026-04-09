@@ -185,8 +185,6 @@ To interact with a trained model, complete the following two steps:
 
 First, convert the checkpoint from the merged format used during training back to the standard Mixture-of-Experts (MoE) format.
 
-> **Important**
->
 > The `--input-path` should point to the saved Hugging Face checkpoint, **not** the root output directory specified during training. The checkpoint is typically located in a subdirectory such as:
 > `TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/`
 
