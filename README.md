@@ -63,9 +63,8 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 - [🔥 Training](#training)
 - [⚡ Evaluation](#evaluation)
 - [🔍 Decoding Process Visualization](#decoding-process-visualization)
-- [📖 Experimental Results](#experimental-results)
 - [☀️ Acknowledgement](#acknowledgement)
-- [📚 Citation](#citations)
+- [📖 Citation](#citations)
 
 ---
 
@@ -77,7 +76,7 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 <!-- ![figure](assets/intro.png) -->
 <div align="center">
-  <img src="assets/train.png" width="100%" />
+  <img src="assets/train.png" width="90%" />
   <br>
   <em>Overview of the On-Policy Uniform Training.</em>
 </div>
@@ -347,15 +346,6 @@ python demo.py
 
 ![demo](assets/demo.png)
 
----
-
-<a id="experimental-results"></a>
-
-## 📖 Experimental Results
-
-### Superior Parallelism-Accuracy Trade-off, Improved TPF with Maintained Accuracy:
-
-![trade-off](assets/tradeoff.png)
 
 ---
 
