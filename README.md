@@ -24,8 +24,9 @@
 https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 
 > **DMax: Aggressive Parallel Decoding for dLLMs**  
-> [Zigeng Chen](https://github.com/czg1225), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
+> [Zigeng Chen](https://czg1225.github.io/chenzigeng99/), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
 > [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore
+> Paper [Arxiv](https://github.com/czg1225/DMax)
 
 ---
 
@@ -63,7 +64,7 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 ## ⭐ Updates
 
-- **[Aprial 10, 2026]**: Code, model and dataset are released.
+- **[April 10, 2026]**: Code, model and dataset are released.
 
 <a id="model-and-datasets"></a>
 
@@ -236,7 +237,7 @@ To interact with a trained model, complete the following two steps:
 First, convert the checkpoint from the merged format used during training back to the standard Mixture-of-Experts (MoE) format.
 
 > **Note:** the `--input-path` should point to the saved Hugging Face checkpoint, **not** the root output directory specified during training. The checkpoint is typically located in a subdirectory such as:
-> `TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/`
+`TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/`
 
 Run the following command to perform the conversion:
 
