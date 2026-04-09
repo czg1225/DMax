@@ -1,9 +1,9 @@
-
-
 <div align="center">
-<h1>🚀 DMax: Aggressive Parallel Decoding for dLLMs</h1>
-  <div align="center">
-  <a href="https://opensource.org/license/mit-0">
+
+# 🚀 DMax: Aggressive Parallel Decoding for dLLMs
+
+<p>
+  <a href="https://github.com/czg1225/DMax/blob/main/LICENSE">
     <img alt="Apache" src="https://img.shields.io/badge/License-Apache-4E94CE.svg">
   </a>
   <a href="https://github.com/czg1225/DMax">
@@ -12,57 +12,74 @@
   <a href="https://huggingface.co/collections/Zigeng/dmax-models">
     <img src="https://img.shields.io/badge/HuggingFace-Models-FFB000.svg" alt="Project">
   </a>
-  </a>
   <a href="https://huggingface.co/collections/Zigeng/dmax-training-data">
     <img src="https://img.shields.io/badge/HuggingFace-Dataset-FFB000.svg" alt="Project">
   </a>
+</p>
+
+<p><strong>DMax is a new dLLM paradigm achieving aggressive parallel decoding while preserving generation quality.</strong></p>
+
 </div>
-</div>
-DMax is a new dLLM paradigm achieving aggressive parallel decoding while preserving generation quality.
 
 https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 
-> **DMax: Aggressive Parallel Decoding for dLLMs**   
-> [Zigeng Chen](https://github.com/czg1225), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)   
-> [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore  
+> **DMax: Aggressive Parallel Decoding for dLLMs**  
+> [Zigeng Chen](https://github.com/czg1225), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
+> [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore
 
+---
 
+## 📚 Table of Contents
+
+- [💡 Introduction](#introduction)
+- [💻 Model and Datasets](#model-and-datasets)
+- [⭐ Updates](#updates)
+- [🚀 Quick Start](#quick-start)
+- [🔧 Installation](#installation)
+- [🔥 Training](#training)
+- [⚡ Evaluation](#evaluation)
+- [🔍 Decoding Process Visualization](#decoding-process-visualization)
+- [📖 Experimental Results](#experimental-results)
+- [☀️ Acknowledgement](#acknowledgement)
+
+---
 
 ## 💡 Introduction
-We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumulation in parallel decoding, enabling aggressive decoding parallelism while preserving generation quality. Unlike conventional masked dLLMs that decode through a binary mask-to-token transition, DMax reformulates decoding as a progressive self-refinement from mask embeddings to token embeddings. At the core of our approach is On-Policy Uniform Training, a novel training strategy that efficiently unifies masked and uniform dLLMs, equipping the model to recover clean tokens from both masked inputs and its own erroneous predictions. Building on this foundation, we further intoduce Soft Parallel Decoding. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of DMax. 
+
+We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumulation in parallel decoding, enabling aggressive decoding parallelism while preserving generation quality. Unlike conventional masked dLLMs that decode through a binary mask-to-token transition, DMax reformulates decoding as a progressive self-refinement from mask embeddings to token embeddings. At the core of our approach is On-Policy Uniform Training, a novel training strategy that efficiently unifies masked and uniform dLLMs, equipping the model to recover clean tokens from both masked inputs and its own erroneous predictions. Building on this foundation, we further intoduce Soft Parallel Decoding. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of DMax.
 
 <!-- ![figure](assets/intro.png) -->
 <div align="center">
-  <img src="assets/train.png" width="100%" ></img>
+  <img src="assets/train.png" width="100%" />
   <br>
-  <em>
-      Overview of the On-Policy Uniform Training. 
-  </em>
+  <em>Overview of the On-Policy Uniform Training.</em>
 </div>
-<br>
 
-
+---
 
 ## 💻 Model and Datasets
 
 | Model | Description | Source Model | Link |
-|------------|-------------|-------------|------|
+| --- | --- | --- | --- |
 | 🤖 DMax-Math-16B | Highly parallel dLLM for math and reasoning. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-Math-16B) |
 | 🤖 DMax-Coder-16B | Highly parallel dLLM for code generation. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-Coder-16B) |
 | 🤖 DMax-16B | Highly parallel general-purpose dLLM. | LLaDA-2.0-mini | Coming soon |
 
 | Dataset | Description | Link |
-|------------|-------------|------|
+| --- | --- | --- |
 | 📊 DMax-Math-Training-Data | Trajectories on math problems generated by LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/datasets/Zigeng/DMax-LLaDA-2.0-Mini-Math-Trajectories) |
 | 📊 DMax-Code-Training-Data | Trajectories on code problems generated by LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/datasets/Zigeng/DMax-LLaDA-2.0-Mini-Code-Trajectories) |
 
-
+---
 
 ## ⭐ Updates
-*  **[Aprial 10, 2026]**: Code, model and dataset are released.
 
+- **[Aprial 10, 2026]**: Code, model and dataset are released.
 
-## 🚀 Quick Start:
+---
+
+## 🚀 Quick Start
+
 ```python
 import torch
 from transformers import AutoModelForCausalLM
@@ -100,20 +117,28 @@ print(generated_answer)
 print("nfe:",nfe,"token length",len(generated_tokens[0]))
 ```
 
-## 🔧  Installation:
+---
+
+## 🔧 Installation
+
 1. Clone the **DMax** reposity
+
 ```bash
 git clone https://github.com/czg1225/DMax.git --recursive
 cd DMax
 ```
+
 2. Install **dFactory** environment for training:
+
 ```bash
 cd dFactory
 conda create -n dFactory python==3.11
 conda activate dFactory
 pip install -e VeOmni/
 ```
+
 3. Install **dInfer** environment for efficient evaluation:
+
 ```bash
 cd dInfer
 conda create -n dInfer python==3.11
@@ -123,23 +148,31 @@ pip install sglang==0.5.3.post1
 pip install vllm==0.10.2
 ```
 
+---
+
 ## 🔥 Training
+
 Our training scripts is based on the dFactory reposity.
+
 ```bash
 cd dFactory
 ```
+
 ### 1. Download and Merge Model Weights
 
 The training scripts require model weights in a "merged-expert" format for optimal performance. Before starting, you must download the standard weights and convert them.
 
 **Download the original model:** Follow the helper script to download the weights from the Hugging Face Hub.
+
 ```bash
 # Choose a destination for the original model files
 python scripts/download_hf_model.py \
   --repo_id inclusionAI/LLaDA2.0-mini \
   --local_dir /path/to/separate_expert_model
 ```
+
 **Convert to the merged format:** Run the following script to create the merged checkpoint required for training.
+
 ```bash
 # Use the path from the previous step as the source
 python scripts/moe_convertor.py \
@@ -150,15 +183,19 @@ python scripts/moe_convertor.py \
 
 ### 2. Prepare Training Data
 
-Before training, the dataset must be converted into the conversational format expected by our training pipeline. The script below transforms the original `"question"` and `"answer"` fields into a `"messages"` field. Run the following command to perform the conversion. 
+Before training, the dataset must be converted into the conversational format expected by our training pipeline. The script below transforms the original `"question"` and `"answer"` fields into a `"messages"` field. Run the following command to perform the conversion.
+
 ```bash
 #prepare the math and reasoning training data
 python scripts/build_dataset_oput.py --dataset_path Zigeng/DMax-LLaDA-2.0-Mini-Math-Trajectories
 # or prepare the code training data
 python scripts/build_dataset_oput.py --dataset_path Zigeng/DMax-LLaDA-2.0-Mini-Code-Trajectories
 ```
+
 ### 3. Modify Training Configs
+
 Edit `configs/sft/llada2_mini_bd_oput.yaml`:
+
 ```yaml
 model:
   model_path: "/your/model/path"
@@ -200,30 +237,41 @@ python scripts/moe_convertor.py \
 **Step 2: Copy the Modeling File**
 
 After the conversion, a final manual step is required. You must copy the model's architecture file (`modeling_llada2_moe.py` and `configuration_llada2_moe`) into the newly created separate_expert_model directory. This file must come from the directory of your original base model — the one you started with before any merge or training operations. The training and conversion processes only update the model weights, not the architecture file, which is why the original version is needed.
+
 ```bash
 cp /path/to/original_base_model/modeling_llada2_moe.py /path/to/save/separate_expert_model/
 cp /path/to/original_base_model/configuration_llada2_moe.py /path/to/save/separate_expert_model/
 ```
-With the model converted and the modeling file in place, you are now ready to chat!  
 
+With the model converted and the modeling file in place, you are now ready to chat!
 
-## ⚡ Evaluation:
+---
+
+## ⚡ Evaluation
+
 Our training scripts is based on the dInfer reposity.
+
 ```bash
 cd dInfer/evaluations
 ```
+
 ### 1. Evaluation on Math & Reasoning Benchmarks
+
 We provide evaluation scripts for several math and reasoning benchmarks. Run the following command to launch the evaluation. You may modify the inference settings in `eval_llada_dmax_math.sh` as needed. Before running the script, please set `model_path` to the path of your locally saved model.
 
 The current evaluation suite supports four benchmarks:
+
 - `GSM8K`
 - `MATH500`
 - `Minerva_Algebra`
 - `ASDIV`
+
 ```bash
 bash eval_llada_dmax_math.sh
 ```
+
 After generation, run the following scripts to extract answers from the generated responses and evaluate accuracy against the ground-truth labels.
+
 ```bash
 python val_gsm8k.py       # postprocess and calculate accuracy on GSM8K
 python val_math.py        # postprocess and calculate accuracy on MATH500
@@ -232,34 +280,42 @@ python val_asdiv.py       # postprocess and calculate accuracy on ASDIV
 ```
 
 ### 2. Evaluation on Code Benchmarks
+
 We also provide evaluation scripts for code generation benchmarks. Run the following command to start the evaluation. You may modify the inference settings in `eval_llada_dmax_code.sh` as needed. Before running the script, please set `model_path` to the path of your locally saved model.
 
 The current evaluation suite supports the following two benchmarks:
+
 - `HumanEval_Instruct`
 - `MBPP_Instruct`
+
 ```bash
 bash eval_llada_dmax_code.sh
 ```
+
+---
 
 ## 🔍 Decoding Process Visualization
 
 We provide a script for visualizing the full decoding process.  
 Run `demo.py` to generate an HTML file named `dllm_demo.html`.  
 Then open this file in Chrome to view the decoding visualization.
+
 ```bash
 python demo.py
 ```
+
 ![demo](assets/demo.png)
 
+---
+
 ## 📖 Experimental Results
+
 ### Superior Parallelism-Accuracy Trade-off, Improved TPF with Maintained Accuracy:
+
 ![trade-off](assets/tradeoff.png)
 
+---
+
 ## ☀️ Acknowledgement
+
 Our code builds on [dFactory](https://github.com/inclusionAI/dFactory), [dInfer](https://github.com/inclusionAI/dInfer), and we acknowledge these great works for laying the groundwork that made our approach possible.
-
-## Citation
-If our research assists your work, please give us a star ⭐ or cite us using:
-```
-
-```
