@@ -254,6 +254,7 @@ python demo.py
 ![demo](assets/demo.png)
 
 ## 📖 Experimental Results
+### Superior Parallelism-Accuracy Trade-off, Improved TPF with Maintained Accuracy:
 ![trade-off](assets/tradeoff.png)
 
 ## ☀️ Acknowledgement
