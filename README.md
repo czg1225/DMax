@@ -42,6 +42,7 @@ https://github.com/user-attachments/assets/89d81255-9cd8-46d1-886e-0733938e5328
 - [🔍 Decoding Process Visualization](#decoding-process-visualization)
 - [📖 Experimental Results](#experimental-results)
 - [☀️ Acknowledgement](#acknowledgement)
+- [📚 Citation](#citations)
 
 ---
 
@@ -348,3 +349,11 @@ python demo.py
 ## ☀️ Acknowledgement
 
 Our code builds on [dFactory](https://github.com/inclusionAI/dFactory), [dInfer](https://github.com/inclusionAI/dInfer), and we acknowledge these great works for laying the groundwork that made our approach possible.
+
+<a id="citations"></a>
+
+## Citation
+If our research assists your work, please give us a star ⭐ or cite us using:
+```
+
+```
