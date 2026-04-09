@@ -29,7 +29,7 @@ def parse_args():
     parser.add_argument("--model-path", default=DEFAULT_MODEL_PATH)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--prompt", default=None)
-    parser.add_argument("--gsm8k-index", type=int, default=0)
+    parser.add_argument("--gsm8k-index", type=int, default=1)
     parser.add_argument("--gen-length", type=int, default=512)
     parser.add_argument("--block-length", type=int, default=32)
     parser.add_argument("--steps", type=int, default=32)
