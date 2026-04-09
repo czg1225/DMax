@@ -177,10 +177,6 @@ The default configuration uses distributed training across 8 GPUs.
 PYTHONPATH=$(pwd)/VeOmni:$PYTHONPATH sh train.sh tasks/train_llada2_bd_oput.py configs/sft/llada2_mini_bd_oput.yaml
 ```
 
-### 5. Interacting with the Trained Model
-
-To interact with your Trained model, you must complete two main steps: converting the checkpoint and copying the modeling file.
-
 ### 5. Interact with the Trained Model
 
 To interact with a trained model, complete the following two steps:
@@ -191,10 +187,7 @@ First, convert the checkpoint from the merged format used during training back t
 
 > **Important**
 >
-> The `--input-path` should point to the saved Hugging Face checkpoint, **not** the root output directory specified during training.
->
-> The checkpoint is typically located in a subdirectory such as:
->
+> The `--input-path` should point to the saved Hugging Face checkpoint, **not** the root output directory specified during training. The checkpoint is typically located in a subdirectory such as:
 > `TRAIN_OUTPUT_DIR/checkpoints/global_step_XXX/hf_ckpt/`
 
 Run the following command to perform the conversion:
