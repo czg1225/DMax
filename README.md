@@ -34,6 +34,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 ## ⭐ Updates
 
+- **[April 10, 2026]**: Our Arxiv paper is available now.
 - **[April 10, 2026]**: Code, model and dataset are released.
 
 ---
