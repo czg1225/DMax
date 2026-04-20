@@ -363,13 +363,10 @@ Our code builds on [dFactory](https://github.com/inclusionAI/dFactory), [dInfer]
 ## 📚 Citation
 If our research assists your work, please give us a star ⭐ or cite us using:
 ```
-@misc{chen2026dmaxaggressiveparalleldecoding,
-      title={DMax: Aggressive Parallel Decoding for dLLMs}, 
-      author={Zigeng Chen and Gongfan Fang and Xinyin Ma and Ruonan Yu and Xinchao Wang},
-      year={2026},
-      eprint={2604.08302},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2604.08302}, 
+@article{chen2026dmax,
+  title={DMax: Aggressive Parallel Decoding for dLLMs},
+  author={Chen, Zigeng and Fang, Gongfan and Ma, Xinyin and Yu, Ruonan and Wang, Xinchao},
+  journal={arXiv preprint arXiv:2604.08302},
+  year={2026}
 }
 ```
