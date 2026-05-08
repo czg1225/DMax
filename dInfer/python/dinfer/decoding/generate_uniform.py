@@ -373,7 +373,7 @@ class BlockDiffusionRunner(BlockRunner):
                 cross_block_replace_positions = (block_loc.start-block_length, block_loc.end) 
                 output, Breakflag, embeddings = self.diff_iteration.forward_uniform(
                 model, decoder, x, kv_cache, cross_block_x, cross_block_loc, block_id, 
-                pos_ids, cross_block_attn_mask, past_key_values, cross_block_replace_positions, self.backend, is_cross_block=True, active_index=active_index, embeddings=embeddings, embedding_layer=embedding_layer
+                pos_ids, cross_block_attn_mask, past_key_values, cross_block_replace_positions, self.backend, is_cross_block=True, active_index=active_index, embeddings=embeddings, embedding_layer=embedding_layer, block_length=block_length
             )   
 
                 if self.backend=='vllm':
@@ -391,7 +391,7 @@ class BlockDiffusionRunner(BlockRunner):
                 # 执行 Forward (这一步会更新 x，从而更新 block 的内容)
                 output, Breakflag, embeddings = self.diff_iteration.forward_uniform(
                     model, decoder, x, kv_cache, block, block_loc, block_id, 
-                    pos_ids, attn_mask, past_key_values, replace_position, self.backend, active_index=active_index, embeddings=embeddings, embedding_layer=embedding_layer
+                    pos_ids, attn_mask, past_key_values, replace_position, self.backend, active_index=active_index, embeddings=embeddings, embedding_layer=embedding_layer, block_length=block_length
                 )
 
             if Breakflag:
