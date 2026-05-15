@@ -6,7 +6,7 @@
   <a href="https://github.com/czg1225/DMax/blob/main/LICENSE">
     <img alt="Apache" src="https://img.shields.io/badge/License-Apache-4E94CE.svg">
   </a>
-  <a href="https://arxiv.org/pdf/2604.08302">
+  <a href="https://arxiv.org/abs/2604.08302">
     <img src="https://img.shields.io/badge/Paper-Arxiv-darkred.svg" alt="Paper">
   </a>
   <a href="https://huggingface.co/collections/Zigeng/dmax-models">
@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 > **DMax: Aggressive Parallel Decoding for dLLMs**  
 > [Zigeng Chen](https://czg1225.github.io/chenzigeng99/), [Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Ruonan Yu](https://scholar.google.com/citations?user=UHP95egAAAAJ&hl=en), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)  
 > [xML Lab](https://sites.google.com/view/xml-nus), National University of Singapore \
-> Paper [Arxiv](https://arxiv.org/pdf/2604.08302)
+> Paper [Arxiv](https://arxiv.org/abs/2604.08302)
 
 ---
 
