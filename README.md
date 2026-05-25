@@ -34,6 +34,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 ## ⭐ Updates
 
+- **[May 25, 2026]**: Our latest model, **DMax-16B**, is now available. It is a highly parallel, general-purpose dLLM that delivers superior efficiency across math, code, and general-purpose tasks. To run inference or evaluation, simply set the model path to `Zigeng/DMax-16B`.
 - **[April 10, 2026]**: Our Arxiv paper is available now.
 - **[April 10, 2026]**: Code, model and dataset are released.
 
@@ -90,9 +91,9 @@ We present DMax, a new paradigm for efficient dLLMs. It mitigates error accumula
 
 | Model | Description | Source Model | Link |
 | --- | --- | --- | --- |
+| 🤖 DMax-16B | Highly parallel general-purpose dLLM. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-16B)  |
 | 🤖 DMax-Math-16B | Highly parallel dLLM for math and reasoning. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-Math-16B) |
 | 🤖 DMax-Coder-16B | Highly parallel dLLM for code generation. | LLaDA-2.0-mini | [Hugging Face](https://huggingface.co/Zigeng/DMax-Coder-16B) |
-| 🤖 DMax-16B | Highly parallel general-purpose dLLM. | LLaDA-2.0-mini | Coming soon |
 
 | Dataset | Description | Link |
 | --- | --- | --- |
@@ -112,11 +113,11 @@ from transformers import AutoModelForCausalLM
 from transformers import AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained(
-    "Zigeng/DMax-Math-16B", trust_remote_code=True, device_map="cuda:0"
+    "Zigeng/DMax-16B", trust_remote_code=True, device_map="cuda:0"
 )
 model = model.to(torch.bfloat16)
 model.eval()
-tokenizer = AutoTokenizer.from_pretrained("Zigeng/DMax-Math-16B", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("Zigeng/DMax-16B", trust_remote_code=True)
 
 prompt = "A robe takes 2 bolts of blue fiber and half that much white fiber. How many bolts in total does it take?" + "\nLet's think step by step\n"
 
