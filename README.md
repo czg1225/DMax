@@ -291,7 +291,7 @@ Download the DMax model: Follow the helper script to download the weights from t
 ```bash
 # Choose a destination for the original model files
 python download_hf_model.py \
-  --repo_id Zigeng/DMax-Math-16B \
+  --repo_id Zigeng/DMax-16B \
   --local_dir /path/to/local_saved_model
 ```
 
