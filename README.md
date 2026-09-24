@@ -34,6 +34,7 @@ https://github.com/user-attachments/assets/4856fa9e-9dae-41b7-9716-568f36a0f638
 
 ## ⭐ Updates
 
+- **[Sep 24, 2026]**: DMax is accepted by NeurIPS 2026! 🎉🎉🎉
 - **[May 25, 2026]**: Our latest model, **DMax-16B**, is now available. It is a highly parallel, general-purpose dLLM that delivers superior efficiency across math, code, and general-purpose tasks. To run inference or evaluation, simply set the model path to `Zigeng/DMax-16B`.
 - **[April 10, 2026]**: Our Arxiv paper is available now.
 - **[April 10, 2026]**: Code, model and dataset are released.
