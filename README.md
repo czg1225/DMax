@@ -358,6 +358,8 @@ python demo.py
 
 Our code builds on [dFactory](https://github.com/inclusionAI/dFactory), [dInfer](https://github.com/inclusionAI/dInfer), and we acknowledge these great works for laying the groundwork that made our approach possible.
 
+We would like to acknowledge that the computational work involved in this research is supported by NUS IT’s High Performance Cluster.
+
 ---
 
 <a id="citations"></a>
