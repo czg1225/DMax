@@ -368,7 +368,7 @@ If our research assists your work, please give us a star ⭐ or cite us using:
 @article{chen2026dmax,
   title={DMax: Aggressive Parallel Decoding for dLLMs},
   author={Chen, Zigeng and Fang, Gongfan and Ma, Xinyin and Yu, Ruonan and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2604.08302},
+  journal={Advances in Neural Information Processing Systems},
   year={2026}
 }
 ```
